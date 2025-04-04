@@ -223,7 +223,7 @@ public class AuthController {
                 .filter(gitHubEmailOne -> gitHubEmailOne.isPrimary())
                 .findFirst().get();
 
-        Optional<User> optionalUser = userRepository.findByUsername(gitHubUser.getEmail());
+        Optional<User> optionalUser = userRepository.findByUsername(gitHubEmail.getEmail());
         if (optionalUser.isPresent())
             return;
 
