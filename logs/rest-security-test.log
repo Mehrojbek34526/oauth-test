@@ -1455,3 +1455,474 @@ org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Requ
 2025-04-04T20:47:15.426+05:00  INFO 54477 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-04-04T20:47:15.433+05:00  INFO 54477 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-04-04T20:47:15.442+05:00  INFO 54477 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:15:56.128+05:00  INFO 64140 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 64140 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:15:56.130+05:00  INFO 64140 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:15:56.591+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:15:56.592+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:15:56.673+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2025-04-04T21:15:56.684+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:15:56.684+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:15:56.693+05:00  INFO 64140 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:15:56.693+05:00  INFO 64140 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:15:57.097+05:00  INFO 64140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:15:57.106+05:00  INFO 64140 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:15:57.106+05:00  INFO 64140 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:15:57.130+05:00  INFO 64140 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:15:57.130+05:00  INFO 64140 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 982 ms
+2025-04-04T21:15:57.146+05:00  WARN 64140 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:15:57.146+05:00  WARN 64140 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:15:57.229+05:00  INFO 64140 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:15:57.257+05:00  INFO 64140 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:15:57.275+05:00  INFO 64140 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:15:57.431+05:00  INFO 64140 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:15:57.452+05:00  INFO 64140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:15:57.541+05:00  INFO 64140 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de63949
+2025-04-04T21:15:57.542+05:00  INFO 64140 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:15:57.595+05:00  INFO 64140 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:15:58.061+05:00  INFO 64140 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:15:58.126+05:00  INFO 64140 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:15:58.313+05:00  INFO 64140 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:15:58.314+05:00  WARN 64140 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:15:58.445+05:00  WARN 64140 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:15:58.985+05:00  INFO 64140 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:15:59.413+05:00  INFO 64140 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:15:59.422+05:00  INFO 64140 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.532 seconds (process running for 5.024)
+2025-04-04T21:16:42.853+05:00  INFO 64140 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:16:42.854+05:00  INFO 64140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:16:42.863+05:00  INFO 64140 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-04-04T21:16:42.909+05:00  INFO 64140 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:16:42.963+05:00  INFO 64140 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:16:57.982+05:00  INFO 64140 --- [http-nio-8080-exec-3] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:17:15.283+05:00  INFO 64140 --- [http-nio-8080-exec-3] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:17:15.326+05:00  INFO 64140 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:17:15.339+05:00  INFO 64140 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:17:15.382+05:00  INFO 64140 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:17:15.388+05:00  INFO 64140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:17:53.897+05:00  INFO 64703 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 64703 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:17:53.898+05:00  INFO 64703 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:17:54.318+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:17:54.319+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:17:54.398+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2025-04-04T21:17:54.406+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:17:54.407+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:17:54.414+05:00  INFO 64703 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:17:54.414+05:00  INFO 64703 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:17:54.789+05:00  INFO 64703 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:17:54.797+05:00  INFO 64703 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:17:54.797+05:00  INFO 64703 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:17:54.821+05:00  INFO 64703 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:17:54.821+05:00  INFO 64703 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2025-04-04T21:17:54.837+05:00  WARN 64703 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:17:54.837+05:00  WARN 64703 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:17:54.918+05:00  INFO 64703 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:17:54.945+05:00  INFO 64703 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:17:54.962+05:00  INFO 64703 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:17:55.108+05:00  INFO 64703 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:17:55.129+05:00  INFO 64703 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:17:55.187+05:00  INFO 64703 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29394966
+2025-04-04T21:17:55.187+05:00  INFO 64703 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:17:55.258+05:00  INFO 64703 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:17:55.821+05:00  INFO 64703 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:17:55.866+05:00  INFO 64703 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:17:56.238+05:00  INFO 64703 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:17:56.239+05:00  WARN 64703 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:17:56.411+05:00  WARN 64703 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:17:56.907+05:00  INFO 64703 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:17:57.324+05:00  INFO 64703 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:17:57.332+05:00  INFO 64703 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.658 seconds (process running for 5.025)
+2025-04-04T21:18:09.808+05:00  INFO 64703 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:18:09.809+05:00  INFO 64703 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:18:09.812+05:00  INFO 64703 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-04T21:18:09.829+05:00  INFO 64703 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:18:09.858+05:00  INFO 64703 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:18:11.433+05:00  INFO 64703 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:18:32.367+05:00  INFO 64703 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:21:12.296+05:00  INFO 64703 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:21:12.307+05:00  INFO 64703 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:21:12.370+05:00  INFO 64703 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:21:12.398+05:00  INFO 64703 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:21:12.409+05:00  INFO 64703 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:21:16.444+05:00  INFO 65646 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 65646 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:21:16.445+05:00  INFO 65646 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:21:16.869+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:21:16.870+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:21:16.950+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2025-04-04T21:21:16.959+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:21:16.960+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:21:16.968+05:00  INFO 65646 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:21:16.968+05:00  INFO 65646 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:21:17.333+05:00  INFO 65646 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:21:17.340+05:00  INFO 65646 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:21:17.341+05:00  INFO 65646 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:21:17.364+05:00  INFO 65646 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:21:17.364+05:00  INFO 65646 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2025-04-04T21:21:17.379+05:00  WARN 65646 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:21:17.379+05:00  WARN 65646 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:21:17.460+05:00  INFO 65646 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:21:17.487+05:00  INFO 65646 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:21:17.504+05:00  INFO 65646 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:21:17.664+05:00  INFO 65646 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:21:17.685+05:00  INFO 65646 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:21:17.747+05:00  INFO 65646 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c5c784c
+2025-04-04T21:21:17.748+05:00  INFO 65646 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:21:17.803+05:00  INFO 65646 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:21:18.227+05:00  INFO 65646 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:21:18.274+05:00  INFO 65646 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:21:18.456+05:00  INFO 65646 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:21:18.457+05:00  WARN 65646 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:21:18.576+05:00  WARN 65646 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:21:19.083+05:00  INFO 65646 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:21:19.484+05:00  INFO 65646 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:21:19.491+05:00  INFO 65646 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.27 seconds (process running for 4.659)
+2025-04-04T21:21:36.949+05:00  INFO 65646 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:21:36.953+05:00  INFO 65646 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:21:36.957+05:00  INFO 65646 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-04-04T21:21:36.978+05:00  INFO 65646 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:21:37.018+05:00  INFO 65646 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:21:38.651+05:00  INFO 65646 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:22:04.732+05:00  WARN 65646 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s877ms).
+2025-04-04T21:22:04.783+05:00  INFO 65646 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:22:04.805+05:00  INFO 65646 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:22:04.824+05:00  INFO 65646 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:22:04.873+05:00  INFO 65646 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:22:04.882+05:00  INFO 65646 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:22:04.885+05:00  INFO 65646 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:24:12.417+05:00  INFO 66485 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 66485 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:24:12.418+05:00  INFO 66485 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:24:12.850+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:24:12.851+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:24:12.929+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2025-04-04T21:24:12.938+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:24:12.939+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:24:12.946+05:00  INFO 66485 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:24:12.947+05:00  INFO 66485 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:24:13.329+05:00  INFO 66485 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:24:13.336+05:00  INFO 66485 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:24:13.336+05:00  INFO 66485 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:24:13.359+05:00  INFO 66485 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:24:13.359+05:00  INFO 66485 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 923 ms
+2025-04-04T21:24:13.373+05:00  WARN 66485 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:24:13.374+05:00  WARN 66485 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:24:13.453+05:00  INFO 66485 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:24:13.480+05:00  INFO 66485 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:24:13.496+05:00  INFO 66485 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:24:13.650+05:00  INFO 66485 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:24:13.668+05:00  INFO 66485 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:24:13.730+05:00  INFO 66485 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2dacda9a
+2025-04-04T21:24:13.731+05:00  INFO 66485 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:24:13.782+05:00  INFO 66485 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:24:14.204+05:00  INFO 66485 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:24:14.248+05:00  INFO 66485 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:24:14.423+05:00  INFO 66485 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:24:14.424+05:00  WARN 66485 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:24:14.539+05:00  WARN 66485 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:24:15.021+05:00  INFO 66485 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:24:15.477+05:00  INFO 66485 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:24:15.485+05:00  INFO 66485 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.29 seconds (process running for 4.672)
+2025-04-04T21:25:04.697+05:00  INFO 66485 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:25:04.698+05:00  INFO 66485 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:25:04.702+05:00  INFO 66485 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-04T21:25:04.723+05:00  INFO 66485 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:25:04.764+05:00  INFO 66485 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:25:06.371+05:00  INFO 66485 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:25:08.210+05:00  INFO 66485 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:26:52.159+05:00  INFO 66485 --- [http-nio-8080-exec-5] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:26:52.178+05:00  INFO 66485 --- [http-nio-8080-exec-5] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:27:00.410+05:00  INFO 66485 --- [http-nio-8080-exec-7] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:27:01.877+05:00  INFO 66485 --- [http-nio-8080-exec-7] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:27:54.646+05:00  INFO 66485 --- [http-nio-8080-exec-8] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:27:54.662+05:00  INFO 66485 --- [http-nio-8080-exec-8] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:27:56.178+05:00  INFO 66485 --- [http-nio-8080-exec-9] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:27:57.375+05:00  INFO 66485 --- [http-nio-8080-exec-9] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:30:02.265+05:00  INFO 66485 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:30:02.275+05:00  INFO 66485 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:30:02.299+05:00  INFO 66485 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:30:02.303+05:00  INFO 66485 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:30:02.306+05:00  INFO 66485 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:30:06.285+05:00  INFO 68160 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 68160 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:30:06.286+05:00  INFO 68160 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:30:06.717+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:30:06.718+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:30:06.799+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2025-04-04T21:30:06.808+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:30:06.808+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:30:06.816+05:00  INFO 68160 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:30:06.816+05:00  INFO 68160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:30:07.178+05:00  INFO 68160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:30:07.186+05:00  INFO 68160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:30:07.187+05:00  INFO 68160 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:30:07.210+05:00  INFO 68160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:30:07.210+05:00  INFO 68160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2025-04-04T21:30:07.224+05:00  WARN 68160 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:30:07.224+05:00  WARN 68160 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:30:07.304+05:00  INFO 68160 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:30:07.332+05:00  INFO 68160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:30:07.349+05:00  INFO 68160 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:30:07.493+05:00  INFO 68160 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:30:07.515+05:00  INFO 68160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:30:07.576+05:00  INFO 68160 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@206bd7a0
+2025-04-04T21:30:07.576+05:00  INFO 68160 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:30:07.634+05:00  INFO 68160 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:30:08.047+05:00  INFO 68160 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:30:08.090+05:00  INFO 68160 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:30:08.269+05:00  INFO 68160 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:30:08.270+05:00  WARN 68160 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:30:08.392+05:00  WARN 68160 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:30:08.868+05:00  INFO 68160 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:30:09.251+05:00  INFO 68160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:30:09.258+05:00  INFO 68160 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.195 seconds (process running for 4.584)
+2025-04-04T21:30:28.637+05:00  INFO 68160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:30:28.638+05:00  INFO 68160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:30:28.641+05:00  INFO 68160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-04T21:30:28.664+05:00  INFO 68160 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:30:28.718+05:00  INFO 68160 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:30:30.336+05:00  INFO 68160 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:30:32.269+05:00  INFO 68160 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:32:43.337+05:00  INFO 68160 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:32:43.362+05:00  INFO 68160 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:32:43.452+05:00  INFO 68160 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:32:43.476+05:00  INFO 68160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:32:43.484+05:00  INFO 68160 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:32:47.574+05:00  INFO 68919 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 68919 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:32:47.575+05:00  INFO 68919 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:32:48.007+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:32:48.008+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:32:48.086+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interface.
+2025-04-04T21:32:48.095+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:32:48.096+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:32:48.104+05:00  INFO 68919 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:32:48.104+05:00  INFO 68919 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:32:48.471+05:00  INFO 68919 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:32:48.479+05:00  INFO 68919 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:32:48.479+05:00  INFO 68919 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:32:48.502+05:00  INFO 68919 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:32:48.502+05:00  INFO 68919 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 909 ms
+2025-04-04T21:32:48.518+05:00  WARN 68919 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:32:48.518+05:00  WARN 68919 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:32:48.600+05:00  INFO 68919 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:32:48.628+05:00  INFO 68919 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:32:48.645+05:00  INFO 68919 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:32:48.787+05:00  INFO 68919 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:32:48.802+05:00  INFO 68919 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:32:48.877+05:00  INFO 68919 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65e92505
+2025-04-04T21:32:48.878+05:00  INFO 68919 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:32:48.928+05:00  INFO 68919 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:32:49.353+05:00  INFO 68919 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:32:49.391+05:00  INFO 68919 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:32:49.562+05:00  INFO 68919 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:32:49.562+05:00  WARN 68919 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:32:49.695+05:00  WARN 68919 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:32:50.179+05:00  INFO 68919 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:32:50.760+05:00  INFO 68919 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:32:50.773+05:00  INFO 68919 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.427 seconds (process running for 4.819)
+2025-04-04T21:33:02.150+05:00  INFO 68919 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:33:02.151+05:00  INFO 68919 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:33:02.154+05:00  INFO 68919 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-04T21:33:02.173+05:00  INFO 68919 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:33:02.202+05:00  INFO 68919 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:33:03.577+05:00  INFO 68919 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:33:05.389+05:00  INFO 68919 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:33:57.344+05:00  INFO 68919 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:33:57.352+05:00  INFO 68919 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:33:57.398+05:00  INFO 68919 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:33:57.402+05:00  INFO 68919 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:33:57.409+05:00  INFO 68919 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:34:01.512+05:00  INFO 69275 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 69275 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:34:01.513+05:00  INFO 69275 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:34:01.947+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:34:01.948+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:34:02.031+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2025-04-04T21:34:02.040+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:34:02.041+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:34:02.049+05:00  INFO 69275 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:34:02.049+05:00  INFO 69275 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:34:02.418+05:00  INFO 69275 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:34:02.426+05:00  INFO 69275 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:34:02.426+05:00  INFO 69275 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:34:02.452+05:00  INFO 69275 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:34:02.452+05:00  INFO 69275 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 922 ms
+2025-04-04T21:34:02.468+05:00  WARN 69275 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:34:02.468+05:00  WARN 69275 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:34:02.554+05:00  INFO 69275 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:34:02.583+05:00  INFO 69275 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:34:02.601+05:00  INFO 69275 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:34:02.760+05:00  INFO 69275 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:34:02.788+05:00  INFO 69275 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:34:02.865+05:00  INFO 69275 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1669f4e5
+2025-04-04T21:34:02.865+05:00  INFO 69275 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:34:02.929+05:00  INFO 69275 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:34:03.399+05:00  INFO 69275 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:34:03.447+05:00  INFO 69275 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:34:03.627+05:00  INFO 69275 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:34:03.628+05:00  WARN 69275 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:34:03.760+05:00  WARN 69275 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:34:04.230+05:00  INFO 69275 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:34:04.640+05:00  INFO 69275 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:34:04.647+05:00  INFO 69275 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.353 seconds (process running for 4.747)
+2025-04-04T21:34:15.032+05:00  INFO 69275 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:34:15.033+05:00  INFO 69275 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:34:15.037+05:00  INFO 69275 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-04-04T21:34:15.061+05:00  INFO 69275 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:34:15.126+05:00  INFO 69275 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:34:16.733+05:00  INFO 69275 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:35:02.859+05:00  WARN 69275 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s888ms).
+2025-04-04T21:35:02.910+05:00  INFO 69275 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:36:29.079+05:00  INFO 69275 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:36:29.098+05:00  INFO 69275 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:36:29.190+05:00  INFO 69275 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:36:29.199+05:00  INFO 69275 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:36:29.208+05:00  INFO 69275 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:36:33.170+05:00  INFO 69992 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 69992 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:36:33.171+05:00  INFO 69992 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:36:33.596+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:36:33.597+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:36:33.677+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2025-04-04T21:36:33.685+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:36:33.686+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:36:33.694+05:00  INFO 69992 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:36:33.694+05:00  INFO 69992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:36:34.056+05:00  INFO 69992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:36:34.063+05:00  INFO 69992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:36:34.063+05:00  INFO 69992 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:36:34.086+05:00  INFO 69992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:36:34.086+05:00  INFO 69992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 897 ms
+2025-04-04T21:36:34.100+05:00  WARN 69992 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:36:34.101+05:00  WARN 69992 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:36:34.181+05:00  INFO 69992 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:36:34.209+05:00  INFO 69992 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:36:34.225+05:00  INFO 69992 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:36:34.373+05:00  INFO 69992 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:36:34.388+05:00  INFO 69992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:36:34.448+05:00  INFO 69992 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2dacda9a
+2025-04-04T21:36:34.449+05:00  INFO 69992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:36:34.502+05:00  INFO 69992 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:36:34.924+05:00  INFO 69992 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:36:34.970+05:00  INFO 69992 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:36:35.146+05:00  INFO 69992 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:36:35.146+05:00  WARN 69992 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:36:35.270+05:00  WARN 69992 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:36:35.770+05:00  INFO 69992 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:36:36.306+05:00  INFO 69992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:36:36.326+05:00  INFO 69992 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.377 seconds (process running for 4.734)
+2025-04-04T21:37:01.531+05:00  INFO 69992 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:37:01.532+05:00  INFO 69992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:37:01.534+05:00  INFO 69992 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-04T21:37:01.558+05:00  INFO 69992 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:37:01.588+05:00  INFO 69992 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:37:03.180+05:00  INFO 69992 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:38:32.472+05:00  WARN 69992 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s910ms).
+2025-04-04T21:38:32.541+05:00  INFO 69992 --- [http-nio-8080-exec-4] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/, Method: GET
+2025-04-04T21:38:32.566+05:00  INFO 69992 --- [http-nio-8080-exec-4] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/, statusCode: 404
+2025-04-04T21:38:32.572+05:00  INFO 69992 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:42:24.194+05:00  INFO 69992 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:42:24.233+05:00  INFO 69992 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:42:24.276+05:00  INFO 69992 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:42:24.282+05:00  INFO 69992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:42:24.290+05:00  INFO 69992 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T21:42:28.255+05:00  INFO 71660 --- [main] u.p.o.OauthExampleApplication            : Starting OauthExampleApplication using Java 22.0.2 with PID 71660 (/Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example/target/classes started by mehrojbekmavlonov in /Users/mehrojbekmavlonov/IdeaProjects/g47/oauth-example)
+2025-04-04T21:42:28.256+05:00  INFO 71660 --- [main] u.p.o.OauthExampleApplication            : The following 1 profile is active: "dev"
+2025-04-04T21:42:28.683+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:42:28.684+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-04T21:42:28.775+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 1 JPA repository interface.
+2025-04-04T21:42:28.786+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-04T21:42:28.786+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-04T21:42:28.814+05:00  INFO 71660 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface uz.pdp.oauthexample.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-04T21:42:28.815+05:00  INFO 71660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-04-04T21:42:29.400+05:00  INFO 71660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-04T21:42:29.410+05:00  INFO 71660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-04T21:42:29.411+05:00  INFO 71660 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-04T21:42:29.437+05:00  INFO 71660 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-04T21:42:29.437+05:00  INFO 71660 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2025-04-04T21:42:29.454+05:00  WARN 71660 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.OncePerRequestFilter.doFilter(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.FilterChain) throws jakarta.servlet.ServletException,java.io.IOException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:42:29.455+05:00  WARN 71660 --- [main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(jakarta.servlet.FilterConfig) throws jakarta.servlet.ServletException] because it is marked as final, consider using interface-based JDK proxies instead.
+2025-04-04T21:42:29.562+05:00  INFO 71660 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-04T21:42:29.592+05:00  INFO 71660 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-04T21:42:29.629+05:00  INFO 71660 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-04T21:42:29.796+05:00  INFO 71660 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-04T21:42:29.818+05:00  INFO 71660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-04T21:42:29.880+05:00  INFO 71660 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@91a1005
+2025-04-04T21:42:29.881+05:00  INFO 71660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-04T21:42:29.934+05:00  INFO 71660 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-04T21:42:30.366+05:00  INFO 71660 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-04T21:42:30.408+05:00  INFO 71660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:42:30.590+05:00  INFO 71660 --- [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-04-04T21:42:30.591+05:00  WARN 71660 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-04-04T21:42:30.709+05:00  WARN 71660 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-04T21:42:31.203+05:00  INFO 71660 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-04T21:42:31.698+05:00  INFO 71660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-04T21:42:31.706+05:00  INFO 71660 --- [main] u.p.o.OauthExampleApplication            : Started OauthExampleApplication in 3.678 seconds (process running for 5.041)
+2025-04-04T21:43:09.102+05:00  INFO 71660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-04T21:43:09.103+05:00  INFO 71660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-04T21:43:09.107+05:00  INFO 71660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-04-04T21:43:09.130+05:00  INFO 71660 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Request -> URI: http://localhost:8080/api/auth/oauth-github-link, Method: GET
+2025-04-04T21:43:09.162+05:00  INFO 71660 --- [http-nio-8080-exec-1] u.p.o.security.SecurityFilter            : Response : URL: http://localhost:8080/api/auth/oauth-github-link, statusCode: 302
+2025-04-04T21:43:10.735+05:00  INFO 71660 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Request -> URI: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, Method: GET
+2025-04-04T21:43:24.159+05:00  INFO 71660 --- [http-nio-8080-exec-2] u.p.o.security.SecurityFilter            : Response : URL: http://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-github-callback, statusCode: 200
+2025-04-04T21:43:32.901+05:00  INFO 71660 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T21:43:32.908+05:00  INFO 71660 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T21:43:32.943+05:00  INFO 71660 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T21:43:32.953+05:00  INFO 71660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T21:43:32.963+05:00  INFO 71660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

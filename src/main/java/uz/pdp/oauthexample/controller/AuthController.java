@@ -1,5 +1,7 @@
 package uz.pdp.oauthexample.controller;
 
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -8,19 +10,19 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.*;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import uz.pdp.oauthexample.entity.User;
-import uz.pdp.oauthexample.payload.GitlabUserDTO;
-import uz.pdp.oauthexample.payload.SignInDTO;
-import uz.pdp.oauthexample.payload.SignUpDTO;
+import uz.pdp.oauthexample.payload.*;
 import uz.pdp.oauthexample.repository.UserRepository;
 import uz.pdp.oauthexample.security.AuthService;
 
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,6 +53,11 @@ public class AuthController {
     @Value("${app.oauth.gitlab.client-secret}")
     private String clientSecretGitlab;
 
+    @Value("${app.oauth.github.client-id}")
+    private String clientIdGithub;
+
+    @Value("${app.oauth.github.client-secret}")
+    private String clientSecretGithub;
 
 
 //    private Logger log = Logger.getLogger(AuthController.class.getName());
@@ -106,27 +113,27 @@ public class AuthController {
 
 
     @GetMapping("/oauth-gitlab-link")
-    public ResponseEntity<?> handleGitLabLink(){
+    public ResponseEntity<?> handleGitLabLink() {
 
         String url = "https://gitlab.com/oauth/authorize" +
-                "?client_id="+clientIdGitlab+
-                "&redirect_uri=https%3A%2F%2F9523-178-218-201-17.ngrok-free.app%2Fapi%2Fauth%2Foauth-gitlab-callback"+
-                "&response_type=code"+
+                "?client_id=" + clientIdGitlab +
+                "&redirect_uri=https%3A%2F%2F9523-178-218-201-17.ngrok-free.app%2Fapi%2Fauth%2Foauth-gitlab-callback" +
+                "&response_type=code" +
                 "&scope=read_user";
 
         return ResponseEntity.status(302)
-                .header("Location",url)
+                .header("Location", url)
                 .build();
 
     }
 
     @GetMapping("/oauth-gitlab-callback")
-    public void handleGitlabOAuthResponse(@RequestParam String code){
+    public void handleGitlabOAuthResponse(@RequestParam String code) {
 
-        String url  = "https://gitlab.com/oauth/token"
-                + "?client_id="+clientIdGitlab
-                + "&client_secret="+clientSecretGitlab
-                + "&code="+code
+        String url = "https://gitlab.com/oauth/token"
+                + "?client_id=" + clientIdGitlab
+                + "&client_secret=" + clientSecretGitlab
+                + "&code=" + code
                 + "&grant_type=authorization_code"
                 + "&redirect_uri=https://9523-178-218-201-17.ngrok-free.app/api/auth/oauth-gitlab-callback";
 
@@ -166,12 +173,75 @@ public class AuthController {
         userRepository.save(user);
     }
 
+    @GetMapping("/oauth-github-link")
+    public ResponseEntity<?> handleGithubLink() {
+        String url = "https://github.com/login/oauth/authorize?client_id=" + clientIdGithub +
+                "&scope=user%20user:email";
+        return ResponseEntity.status(302)
+                .header("Location", url)
+                .build();
+    }
+
+    @GetMapping("/oauth-github-callback")
+    public void handleGithubOAuthResponse(@RequestParam String code) {
+        String tokenUrl = "https://github.com/login/oauth/access_token"
+                + "?client_id=" + clientIdGithub
+                + "&client_secret=" + clientSecretGithub
+                + "&code=" + code;
+        RestTemplate restTemplate = new RestTemplate();
+        Map gitHubToken = restTemplate.postForObject(tokenUrl, null, Map.class);
+        String accessToken = gitHubToken.get("access_token").toString();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setBearerAuth(accessToken);
+        HttpEntity<?> httpEntity = new HttpEntity<>(headers);
+
+        ResponseEntity<GitHubUser> exchange = restTemplate.exchange(
+                "https://api.github.com/user",
+                HttpMethod.GET,
+                httpEntity,
+                GitHubUser.class
+        );
+
+        GitHubUser gitHubUser = Objects.requireNonNull(exchange.getBody());
+
+        System.out.println(gitHubUser);
+
+        JavaType type = TypeFactory.defaultInstance().constructParametricType(List.class, GitHubEmail.class);
+        ParameterizedTypeReference<List<GitHubEmail>> parameterizedTypeReference = ParameterizedTypeReference.forType(type);
+
+        List<GitHubEmail> gitHubEmails = restTemplate.exchange(
+                "https://api.github.com/user/emails",
+                HttpMethod.GET,
+                httpEntity,
+                parameterizedTypeReference
+        ).getBody();
+
+        System.out.println(gitHubEmails);
+
+        GitHubEmail gitHubEmail = gitHubEmails.stream()
+                .filter(gitHubEmailOne -> gitHubEmailOne.isPrimary())
+                .findFirst().get();
+
+        Optional<User> optionalUser = userRepository.findByUsername(gitHubUser.getEmail());
+        if (optionalUser.isPresent())
+            return;
+
+        User user = new User(
+                gitHubEmail.getEmail(),
+                null,
+                true,
+                gitHubUser.getName()
+        );
+        userRepository.save(user);
+    }
+
     public String exchangeCodeForToken(String code) {
         String tokenUrl = "https://oauth2.googleapis.com/token" +
                 "?client_id=" + clientId +
                 "&client_secret=" + clientSecret +
                 "&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fauth%2Foauth-google-callback" +
-                "&code="+code;
+                "&code=" + code;
 
         RestTemplate restTemplate = new RestTemplate();
 
