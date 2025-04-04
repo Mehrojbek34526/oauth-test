@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .register {
+            background-color: #007BFF;
+            margin-top: 10px;
+        }
+        .google {
+            background-color: #DB4437;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Sign Up</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button class="btn register" onclick="registerUser()">Register</button>
+    <button class="btn google">
+        <a style="text-decoration: none; color: white" href="http://localhost:8080/api/auth/oauth-google-redirect">Sign up with Google</a>
+    </button>
+</div>
+<script>
+    function registerUser() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        fetch('http://localhost:8080/api/auth/sign-up', {
+            method: 'POST',
+            headers: {
+                'Accept-Language': 'en-GB,en;q=0.9,uz-UZ;q=0.8,uz;q=0.7,ru-RU;q=0.6,ru;q=0.5,en-US;q=0.4,tg;q=0.3',
+                'Connection': 'keep-alive',
+                'Content-Type': 'application/json',
+                'Accept': '*/*'
+            },
+            body: JSON.stringify({ username, password })
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Registration Successful!');
+                console.log(data);
+            })
+            .catch(error => {
+                alert('Registration Failed!');
+                console.error('Error:', error);
+            });
+    }
+</script>
+</body>
+</html>
